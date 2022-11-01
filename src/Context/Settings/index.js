@@ -3,19 +3,23 @@ import React, { useState } from 'react';
 export const SettingsContext = React.createContext();
 
 const SettingsProvider = ({children}) => {
-  const [title, setTitle] = useState('Some Site');
-  const [email, setEmail] = useState('someone@somesite.com')
+  const [showCompleted, setShowCompleted] = useState(false);
+  const [pageItems, setPageItems] = useState(3);
+  const [sort, setSort] = useState('difficulty');
   
   const values = {
-    title,
-    email,
+    showCompleted,
+    pageItems,
+    sort,
+    setShowCompleted,
+    setPageItems,
+    setSort,
   }
 
   return (
     <SettingsProvider value={values} >
       {children}
     </SettingsProvider>
-
 
   )
 }

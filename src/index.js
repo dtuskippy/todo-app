@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { MantineProvider } from '@mantine/core';
 import ModeProvider from './Context/Mode';
 import SettingsProvider from './Context/Settings';
