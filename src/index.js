@@ -1,13 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { MantineProvider } from '@mantine/core';
+import ModeProvider from './Context/Mode';
+import SettingsProvider from './Context/Settings';
+import App from './App';
 
-import App from './app.js';
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <MantineProvider withGlobalStyles withNormalizeCSS>
+      <SettingsProvider>
+        <ModeProvider>
+          <App />
+        </ModeProvider>
+      </SettingsProvider>
+    </MantineProvider>
+  </React.StrictMode>
+);
 
-class Main extends React.Component {
-  render() {
-    return <App />;
-  }
-}
 
-const rootElement = document.getElementById('root');
-ReactDOM.render(<Main />, rootElement);
