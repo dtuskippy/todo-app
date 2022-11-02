@@ -1,17 +1,24 @@
-import React, { useContext } from 'react';
-import Main from './components/Main';
-import { SettingsContext } from './Context/Settings';
+// import React from 'react';
 
+// import ToDo from './components/todo/todo.js';
 
-function App() {
-  const { title, email } = useContext(SettingsContext);
+// export default class App extends React.Component {
+//   render() {
+//     return (
+//       <ToDo />
+//     );
+//   }
+// }
+
+//change to function
+import React from 'react';
+
+import ToDo from './Components/ToDo/';
+
+export default class App extends React.Component {
+  render() {
     return (
-      <>
-        <h1>{title}</h1>
-        <h2>Email us at {email}</h2>
-        <Main />
-      </>
+      <ToDo />
     );
+  }
 }
-
-export default App;
