@@ -33,6 +33,3 @@
 
     * npm test
 
-### UML: Basic Auth Server -- Lab 06 UML
-
-![UML - Lab 04](public/lab-26.png)
