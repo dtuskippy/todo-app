@@ -28,14 +28,4 @@ describe('Settings Context', () => {
     expect(pageItemLi).toHaveTextContent(3);
     expect(sortLi).toHaveTextContent('difficulty');
   })
-
-
-
-
-
-
-
-
-
-
 })
