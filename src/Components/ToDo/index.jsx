@@ -106,7 +106,7 @@ const ToDo = () => {
             list={list} 
             toggleComplete={toggleComplete} 
             deleteItem={deleteItem} 
-            />
+          />
         </Grid.Col>
       </Grid>
     </>

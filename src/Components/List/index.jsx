@@ -33,11 +33,11 @@ const List = ({ list, toggleComplete, deleteItem }) => {
               <Group position="left">
                 <Badge 
                   onClick={() => toggleComplete(item.id)}
-                  className = {classes.badge}
-                  color={item.complete ? "green" : "red"} 
+                  className={classes.badge}
+                  color={item.complete ? "red" : "green"} 
                   variant="filled"
                 >
-                  {item.complete ? 'pending' : 'complete'}
+                  {item.complete ? 'complete' : 'pending'}
                 </Badge>
                   <Text>{item.assignee}</Text>
               </Group>
