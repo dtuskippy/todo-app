@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import useForm from '../../hooks/form.js';
-import Header from '../Header';
 
 import { v4 as uuid } from 'uuid';
 import List from '../List/index.jsx';
@@ -10,6 +9,16 @@ const useStyles = createStyles((theme) => ({
   formHeading: {
     fontSize: theme.fontSizes.lg,
     fontWeight: 'bold',
+  },
+  h1: {
+    backgroundColor: theme.colors.gray[8],
+    color: theme.colors.gray[0],
+    width: '80%',
+    margin: 'auto',
+    fontSize: theme.fontSizes.lg,
+    padding: theme.spacing.md,
+    marginBottom: theme.spacing.md,
+    marginTop: theme.spacing.md,
   },
 }));
 
@@ -60,7 +69,7 @@ const ToDo = () => {
 
   return (
     <>
-      <Header incomplete={incomplete} />
+      <h1 className={classes.h1} data-testid="todo-h1">To Do List: {incomplete} items pending</h1>
       <Grid style={{ width: '80%', margin: 'auto' }}>
         <Grid.Col xs={12} sm={4}>
           <Card withBorder p="xs">
